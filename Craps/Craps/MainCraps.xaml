@@ -1,0 +1,71 @@
+﻿<Window x:Name="windowCraps" x:Class="Craps.WindowCraps"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Craps"
+        xmlns:commands="clr-namespace:Craps.Commands"
+        mc:Ignorable="d"
+        Title="Craps" Height="463.613" Width="637.697" WindowStartupLocation="CenterScreen" Closing="windowCraps_Closing">
+    <Canvas Margin="0,0,2,2">
+        <Menu x:Name="menuBar">
+            <MenuItem x:Name="menuItemGame" Header="_Game">
+                <MenuItem x:Name="menuItemStart" Header="_Start..." Command="{x:Static commands:CrapsCommands.startCommand}" InputGestureText="Ctrl+S"/>
+                <MenuItem x:Name="menuItemResetSession" Header="_Reset Session" Command="{x:Static commands:CrapsCommands.restartCommand}" InputGestureText="Ctrl+R"/>
+                <MenuItem x:Name="menuItemExit" Header="_Exit" Command="{x:Static commands:CrapsCommands.exitCommand}" InputGestureText="Ctrl+E"/>
+            </MenuItem>
+            <MenuItem x:Name="menuItemHelp" Header="_Help">
+                <MenuItem x:Name="menuItemAbout" Header="_About" Command="{x:Static commands:CrapsCommands.helpCommand}" InputGestureText="Ctrl+A"/>
+                <MenuItem x:Name="menuItemRules" Header="_Rules" Command="{x:Static commands:CrapsCommands.rulesCommand}" InputGestureText="Ctrl+L"/>
+                <MenuItem x:Name="menuItemShotCuts" Header="_Keyboard Shortcuts" Command="{x:Static commands:CrapsCommands.shortCutsCommand}" InputGestureText="Ctrl+K"/>
+            </MenuItem>
+
+        </Menu>
+        <Button x:Name="buttonRollDice" Content="Roll Dice" Command="{x:Static commands:CrapsCommands.rollCommand}" Width="129" Canvas.Left="30" Canvas.Top="43" Height="30" IsEnabled="False"/>
+        <Label x:Name="labelPoint" Content="Point" Canvas.Left="23" Canvas.Top="78"/>
+        <TextBox x:Name="textBoxPoint" Height="22" Canvas.Left="65" TextWrapping="Wrap" Canvas.Top="82" Width="94" IsEnabled="False"/>
+        <Rectangle x:Name="rectCurrentRoll" Fill="#FFF4F4F5" Height="147" Canvas.Left="416" Stroke="Black" Canvas.Top="52" Width="175"/>
+        <Label x:Name="labelCurrentRoll" Content="Current Roll" Canvas.Left="416" Canvas.Top="52"/>
+        <Label x:Name="labelDieOne" Content="Die 1" Canvas.Left="466" Canvas.Top="83"/>
+        <Label x:Name="labelDieTwo" Content="Die 2" Canvas.Left="466" Canvas.Top="114"/>
+        <Label x:Name="labelDieTotal" Content="Total" Canvas.Left="466" Canvas.Top="145"/>
+        <TextBox x:Name="textBoxDieOne" Height="23" Canvas.Left="508" TextWrapping="Wrap" Canvas.Top="87" Width="71" IsEnabled="False"/>
+        <TextBox x:Name="textBoxDieTwo" Height="23" Canvas.Left="508" TextWrapping="Wrap" Canvas.Top="117" Width="71" IsEnabled="False"/>
+        <TextBox x:Name="textBoxDieTotal" Height="23" Canvas.Left="508" TextWrapping="Wrap" Canvas.Top="149" Width="71" IsEnabled="False"/>
+        <Rectangle Fill="#FFF4F4F5" Height="100" Canvas.Left="416" Stroke="Black" Canvas.Top="276" Width="175"/>
+        <Label x:Name="labelWinTotals" Content="Win Totals" Canvas.Left="416" Canvas.Top="276"/>
+        <Label x:Name="labelPlayerWinTotal" Content="Player win total" Canvas.Left="417" Canvas.Top="303"/>
+        <Label x:Name="labelHouseWinTotal" Content="House win total" Canvas.Left="417" Canvas.Top="334"/>
+        <TextBox x:Name="textBoxPlayerWinTotal" Height="23" Canvas.Left="508" TextWrapping="Wrap" Canvas.Top="306" Width="71" IsEnabled="False"/>
+        <TextBox x:Name="textBoxHouseWinTotal" Height="23" Canvas.Left="508" TextWrapping="Wrap" Canvas.Top="337" Width="71" IsEnabled="False"/>
+        <Label x:Name="labelWinnerLooser" Content="WinnerLooser" Canvas.Left="65" Canvas.Top="190" Background="#00000000" Foreground="#FFE20F0F" BorderThickness="0" FontSize="16" FontWeight="Bold" Visibility="Hidden"/>
+        <Button x:Name="buttonPlayAgain" Content="Play Again" Command="{x:Static commands:CrapsCommands.playAgainCommand}" Width="129" Canvas.Left="30" Canvas.Top="337" Height="30" IsEnabled="False"/>
+        <Label x:Name="labelPhase" Content="Phase" Canvas.Left="23" Canvas.Top="113" Foreground="Black" Visibility="Hidden"/>
+        <Label x:Name="labelAccount" Content="Account Balance" Canvas.Left="185" Canvas.Top="43" Visibility="Hidden"/>
+        <TextBox x:Name="textBoxAccount" Height="23" Canvas.Left="282" TextWrapping="Wrap" Canvas.Top="46" Width="120" IsEnabled="False" Visibility="Hidden"/>
+        <Label x:Name="labelBet" Content="Bet" Canvas.Left="255" Canvas.Top="75" Visibility="Hidden"/>
+        <TextBox x:Name="textBoxBet" Height="23" Canvas.Left="282" TextWrapping="Wrap" Canvas.Top="78" Width="120" Visibility="Hidden" KeyUp="textBoxBet_KeyUp"/>
+
+
+    </Canvas>
+    <Window.CommandBindings>
+        <CommandBinding Command="{x:Static commands:CrapsCommands.startCommand}" Executed="startCommandBinding_Executed" />
+        <CommandBinding Command="{x:Static commands:CrapsCommands.restartCommand}" Executed="restartCommandBinding_Executed" />
+        <CommandBinding Command="{x:Static commands:CrapsCommands.exitCommand}" Executed="exitCommandBinding_Executed" />
+        <CommandBinding Command="{x:Static commands:CrapsCommands.helpCommand}" Executed="helpCommandBinding_Executed" />
+        <CommandBinding Command="{x:Static commands:CrapsCommands.rulesCommand}" Executed="rulesCommandBinding_Executed" />
+        <CommandBinding Command="{x:Static commands:CrapsCommands.shortCutsCommand}" Executed="shortCutsCommandBinding_Executed" />
+        <CommandBinding Command="{x:Static commands:CrapsCommands.rollCommand}" Executed="rollCommandBinding_Executed" />
+        <CommandBinding Command="{x:Static commands:CrapsCommands.playAgainCommand}" Executed="playAgainCommandBinding_Executed" />
+    </Window.CommandBindings>
+    <Window.InputBindings>
+        <KeyBinding Key="S" Modifiers="Control" Command="{x:Static commands:CrapsCommands.startCommand}"/>
+        <KeyBinding Key="R" Modifiers="Control" Command="{x:Static commands:CrapsCommands.restartCommand}"/>
+        <KeyBinding Key="E" Modifiers="Control" Command="{x:Static commands:CrapsCommands.exitCommand}"/>
+        <KeyBinding Key="H" Modifiers="Control" Command="{x:Static commands:CrapsCommands.helpCommand}"/>
+        <KeyBinding Key="L" Modifiers="Control" Command="{x:Static commands:CrapsCommands.rulesCommand}"/>
+        <KeyBinding Key="K" Modifiers="Control" Command="{x:Static commands:CrapsCommands.shortCutsCommand}"/>
+        <KeyBinding Key="D" Modifiers="Control" Command="{x:Static commands:CrapsCommands.rollCommand}"/>
+        <KeyBinding Key="A" Modifiers="Control" Command="{x:Static commands:CrapsCommands.playAgainCommand}"/>
+    </Window.InputBindings>
+</Window>

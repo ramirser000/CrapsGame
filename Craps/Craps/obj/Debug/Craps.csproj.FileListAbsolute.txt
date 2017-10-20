@@ -1,0 +1,17 @@
+c:\users\ramir\onedrive\documents\visual studio 2015\Projects\Craps\Craps\bin\Debug\Craps.exe.config
+c:\users\ramir\onedrive\documents\visual studio 2015\Projects\Craps\Craps\bin\Debug\Craps.exe
+c:\users\ramir\onedrive\documents\visual studio 2015\Projects\Craps\Craps\bin\Debug\Craps.pdb
+c:\users\ramir\onedrive\documents\visual studio 2015\Projects\Craps\Craps\obj\Debug\Craps.csprojResolveAssemblyReference.cache
+c:\users\ramir\onedrive\documents\visual studio 2015\Projects\Craps\Craps\obj\Debug\App.g.cs
+c:\users\ramir\onedrive\documents\visual studio 2015\Projects\Craps\Craps\obj\Debug\Craps_MarkupCompile.cache
+c:\users\ramir\onedrive\documents\visual studio 2015\Projects\Craps\Craps\obj\Debug\Craps_MarkupCompile.lref
+c:\users\ramir\onedrive\documents\visual studio 2015\Projects\Craps\Craps\obj\Debug\Craps.g.resources
+c:\users\ramir\onedrive\documents\visual studio 2015\Projects\Craps\Craps\obj\Debug\Craps.Properties.Resources.resources
+c:\users\ramir\onedrive\documents\visual studio 2015\Projects\Craps\Craps\obj\Debug\Craps.csproj.GenerateResource.Cache
+c:\users\ramir\onedrive\documents\visual studio 2015\Projects\Craps\Craps\obj\Debug\Craps.exe
+c:\users\ramir\onedrive\documents\visual studio 2015\Projects\Craps\Craps\obj\Debug\Craps.pdb
+C:\Users\ramir\OneDrive\Documents\Visual Studio 2015\Projects\Craps\Craps\obj\Debug\AccountDialog.g.cs
+C:\Users\ramir\OneDrive\Documents\Visual Studio 2015\Projects\Craps\Craps\obj\Debug\AccountDialog.baml
+C:\Users\ramir\OneDrive\Documents\Visual Studio 2015\Projects\Craps\Craps\obj\Debug\MainCraps.g.cs
+C:\Users\ramir\OneDrive\Documents\Visual Studio 2015\Projects\Craps\Craps\obj\Debug\MainCraps.baml
+C:\Users\ramir\OneDrive\Documents\Visual Studio 2015\Projects\Craps\Craps\obj\Debug\Craps.csproj.CoreCompileInputs.cache
